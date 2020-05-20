@@ -7,7 +7,7 @@ To-Do:
 
 
 class Agency:
-    def __init__(self, agency_id, agency_name, agency_timezone, agency_lang, agency_phone, agency_url, agency_fare_url):
+    def __init__(self, agency_id, agency_name, agency_url, agency_timezone, agency_lang, agency_phone, agency_fare_url):
         self.agency_id = agency_id  # Required
         self.agency_name = agency_name  # Required
         self.agency_url = agency_url  # Required
@@ -18,7 +18,7 @@ class Agency:
         else:
             self.agency_lang = agency_lang
 
-        if agency_phone is "" or agency_lang is None:
+        if agency_phone is "" or agency_phone is None:
             self.agency_phone = None
         else:
             self.agency_phone = agency_phone
@@ -30,7 +30,7 @@ class Agency:
 
 
 class Routes:
-    def __init__(self, route_id, agency_id, route_short_name, route_long_name, route_type, route_color, route_text_color):
+    def __init__(self, route_id, route_short_name, route_long_name, route_type, agency_id, route_color, route_text_color):
         self.route_id = route_id  # Required
         self.route_short_name = route_short_name  # Required
         self.route_long_name = route_long_name  # Required
@@ -94,41 +94,63 @@ class StopTimes:
             self.drop_off_type = drop_off_type
 
         if pickup_type is "" or pickup_type is None:
-            self.pickup_type = pickup_type
+            self.pickup_type = None
         else:
             self.pickup_type = pickup_type
 
 
-
-
 class Trips:
-    def __init__(self, route_id, service_id, trip_id, trip_headsign, trip_short_name, direction_id, block_id, shape_id, wheelchair_access, bikes_allowed,
+    def __init__(self, trip_id, route_id, service_id,  direction_id, trip_headsign, trip_short_name, block_id, shape_id, wheelchair_access, bikes_allowed,
                  route_variant):
-        self.route_id = route_id
-        self.service_id = service_id
-        self.trip_id = trip_id
-        self.trip_headsign = trip_headsign
-        self.trip_short_name = trip_short_name
-        self.direction_id = direction_id
-        self.block_id = block_id
-        self.shape_id = shape_id
-        self.wheelchair_access = wheelchair_access
-        self.bikes_allowed = bikes_allowed
-        self.route_variant = route_variant
+        self.trip_id = trip_id  # Required
+        self.route_id = route_id  # Required
+        self.service_id = service_id  # Required
+        self.direction_id = direction_id  # Required
+        self.trip_headsign = trip_headsign  # Required
+
+        if trip_short_name is "" or trip_short_name is None:
+            self.trip_short_name = None
+        else:
+            self.trip_short_name = trip_short_name
+
+        if block_id is "" or block_id is None:
+            self.block_id = None
+        else:
+            self.block_id = block_id
+
+        if shape_id is "" or shape_id is None:
+            self.shape_id = None
+        else:
+            self.shape_id = shape_id
+
+        if wheelchair_access is "" or wheelchair_access is None:
+            self.wheelchair_access = None
+        else:
+            self.wheelchair_access = wheelchair_access
+
+        if bikes_allowed is "" or bikes_allowed is None:
+            self.bikes_allowed = None
+        else:
+            self.bikes_allowed = bikes_allowed
+
+        if route_variant is "" or route_variant is None:
+            self.route_variant = None
+        else:
+            self.route_variant = route_variant
 
 
 class Calendar:
     def __init__(self, service_id, monday, tuesday, wednesday, thursday, friday, saturday, sunday, start_date, end_date):
-        self.service_id = service_id
-        self.monday = monday
-        self.tuesday = tuesday
-        self.wednesday = wednesday
-        self.thursday = thursday
-        self.friday = friday
-        self.saturday = saturday
-        self.sunday = sunday
-        self.start_date = start_date
-        self.end_date = end_date
+        self.service_id = service_id   # Required
+        self.monday = int(monday)  # Required
+        self.tuesday = int(tuesday)  # Required
+        self.wednesday = int(wednesday)  # Required
+        self.thursday = int(thursday)  # Required
+        self.friday = int(friday)  # Required
+        self.saturday = int(saturday)  # Required
+        self.sunday = int(sunday)  # Required
+        self.start_date = start_date  # Required
+        self.end_date = end_date  # Required
 
 
 # Conditional Files

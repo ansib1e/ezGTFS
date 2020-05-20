@@ -54,25 +54,51 @@ class Routes:
 
 class Stops:
     def __init__(self, stop_id, stop_name, stop_lat, stop_lon, zone_id, location_type, wheelchair_boarding):
-        self.stop_id = stop_id
-        self.stop_name = stop_name
-        self.stop_lat = stop_lat
-        self.stop_lon = stop_lon
-        self.zone_id = zone_id
-        self.location_type = location_type
-        self.wheelchair_boarding = wheelchair_boarding
+        self.stop_id = stop_id  # Required
+        self.stop_name = stop_name  # Required
+        self.stop_lat = stop_lat  # Required
+        self.stop_lon = stop_lon  # Required
+
+        if zone_id is "" or zone_id is None:
+            self.zone_id = None
+        else:
+            self.zone_id = zone_id
+
+        if location_type is "" or location_type is None:
+            self.location_type = None
+        else:
+            self.location_type = location_type
+
+        if wheelchair_boarding is "" or wheelchair_boarding is None:
+            self.wheelchair_boarding = None
+        else:
+            self.wheelchair_boarding = wheelchair_boarding
 
 
 class StopTimes:
-    def __init__(self, trip_id, arrival_time, stop_id, stop_headsign, drop_off_type, pickup_type, stop_sequence, departure_time):
-        self.trip_id = trip_id
-        self.arrival_time = arrival_time
-        self.stop_id = stop_id
-        self.stop_headsign = stop_headsign
-        self.drop_off_type = drop_off_type
-        self.pickup_type = pickup_type
-        self.stop_sequence = stop_sequence
-        self.departure_time = departure_time
+    def __init__(self, stop_id, trip_id, arrival_time, departure_time, stop_sequence, stop_headsign, drop_off_type, pickup_type):
+        self.stop_id = stop_id  # Required
+        self.trip_id = trip_id  # Required
+        self.arrival_time = arrival_time  # Required
+        self.departure_time = departure_time  # Required
+        self.stop_sequence = stop_sequence  # Required
+
+        if stop_headsign is "" or stop_headsign is None:
+            self.stop_headsign = None
+        else:
+            self.stop_headsign = stop_headsign
+
+        if drop_off_type is "" or drop_off_type is None:
+            self.drop_off_type = None
+        else:
+            self.drop_off_type = drop_off_type
+
+        if pickup_type is "" or pickup_type is None:
+            self.pickup_type = pickup_type
+        else:
+            self.pickup_type = pickup_type
+
+
 
 
 class Trips:

@@ -1,0 +1,17 @@
+stop_id,stop_lat,stop_lon,stop_name,wheelchair_boarding,zone_id
+science_centre,43.72055,-79.33891,Ontario Science Centre,,science_centre
+flemingdon_park,43.71442,-79.33631,Flemingdon Park,,flemingdon_park
+thorncliffe_park,43.70754,-79.34365,Thorncliffe Park,,thorncliffe_park
+cosburn,43.68943,-79.3488,Cosburn,,cosburn
+pape_station,43.680066,-79.344974,Pape Station,,pape_station
+gerrard,43.66767,-79.34275,Gerrard,,gerrard
+leslieville,43.663731,-79.345087,Leslieville,,leslieville
+east_harbour,43.655137,-79.347497,East Harbour,,east_harbour
+corktown,43.654290,-79.365331,Corktown,,corktown
+moss_park,43.65453,-79.36944,Moss Park,,moss_park
+queen,43.652296,-79.379369,Queen Station,,queen
+osgoode,43.650683,-79.386931,Osgoode Station,,osgoode
+queen_spadina, 43.648765,-79.396376, Queen / Spadina,,queen_spadina
+king_bathurst,43.64393,-79.40268,King / Bathurst,,king_bathurst
+exhibition_go,43.635549,-79.418927,Exhibition GO,,exhibition_go
+distillery,43.649662, -79.360574, Distillery District,,distillery_d

@@ -1,0 +1,2 @@
+﻿agency_id,agency_name,agency_url,agency_timezone,route_id,route_short_name,route_long_name,route_type,route_color,route_text_color,service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+GO_SMT,Tory,http://www.metrolinx.com/en/,America/Toronto,SMT_01,SMT,Smarttrack,1,None,None,weekday_service,1,1,1,1,1,0,0,20190101,20241231

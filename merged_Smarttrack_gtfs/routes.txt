@@ -1,0 +1,2 @@
+agency_id,route_id,route_long_name,route_short_name,route_type
+GO_SMT,SMT_01,Smarttrack,SMT,1

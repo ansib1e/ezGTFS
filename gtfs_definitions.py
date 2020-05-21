@@ -28,6 +28,11 @@ class Agency:
         else:
             self.agency_fare_url = agency_fare_url
 
+    def __str__(self):
+        return " [+] NEW 'agency' Class Object ->\n\t[agency_id : {}, agency_name : {}, agency_url, : {}, agency_timezone : {}, agency_lang, : {}, agency_phone : {}, agency_fare_url : {}]".format(
+            self.agency_id, self.agency_name, self.agency_url, self.agency_timezone, self.agency_lang, self.agency_phone, self.agency_fare_url)
+
+
 
 class Routes:
     def __init__(self, route_id, route_short_name, route_long_name, route_type, agency_id, route_color, route_text_color):

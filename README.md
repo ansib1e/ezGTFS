@@ -1,4 +1,5 @@
 # GTFS_generator
+Python application that manages and creates public transit schedules data in static GTFS format.
 ------------------------------
 
 Python application that manages and creates public transit schedules data in static GTFS format.
